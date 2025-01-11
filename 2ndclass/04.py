@@ -4,7 +4,7 @@ data={
     "Age":[24,30,29,35],
     "City":["New York","Chicago","San Frascisco","New York"]
 }
-df=pd.DataFrame(data)
-filtered_df=df[df["Age"]>28]
+Data=pd.DataFrame(data)
+filtered_Data=Data[Data["Age"]>28]
 print("filtered dataframe: ")
-print(filtered_df)
+print(filtered_Data)
