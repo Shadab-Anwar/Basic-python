@@ -1,5 +1,5 @@
 a = int(input("Enter your number :"))
-if (a<0):
+if (a<=0):
         print("you have entered a -ve num")
 else:
         k = 1
