@@ -4,10 +4,10 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score,mean_squared_error
-df = pd.read_csv('./SALES.csv') #Importing the data set
-new_df = df[['TV','SALES']]
-X = np.array(new_df[['TV']]) # Storing into X the 'Engine HP' as np.array
-y = np.array(new_df[['SALES']]) # Storing into y the 'MSRP' as np.array
+df = pd.read_csv('./city_population_vs_profit.csv') #Importing the data set
+new_df = df[['Population of city ($1000)','Profit of restaurants ($10K)']]
+X = np.array(new_df[['Population of city ($1000)']]) # Storing into X the 'Engine HP' as np.array
+y = np.array(new_df[['Profit of restaurants ($10K)']]) # Storing into y the 'MSRP' as np.array
 print(X.shape) # Vewing the shape of X
 print(y.shape) # Vewing the shape of y
 plt.scatter(X,y,color="red") # Plot a graph X vs y
