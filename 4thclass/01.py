@@ -15,7 +15,7 @@ plt.title('Population of the city vs. Profit of restaurants')
 plt.xlabel('TV')
 plt.ylabel('Sales')
 plt.show()
-X_train,X_test,y_train,y_test = train_test_split(X,y,test_size = 0.333,random_state=15)
+X_train,X_test,y_train,y_test = train_test_split(X,y,test_size = 0.3,random_state=15)
 regressor = LinearRegression() # Creating a regressior
 print("Training Set:")
 print(X_train)
