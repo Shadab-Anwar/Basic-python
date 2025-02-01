@@ -21,4 +21,5 @@ print(f"Precision: {precision:.2f}")
 print(f"Recall: {recall:.2f}")
 print(f"F1-Score: {f1:.2f}")
 print("\nClassification Report:\n")
+
 print(classification_report(y_test, y_pred))
