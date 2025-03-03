@@ -29,11 +29,11 @@ sum(trainy==1), sum(trainy==2), sum(trainy==3)
 
 
     
-#question 1
+# # question 1
 # print(sum(testy==1), sum(testy==2), sum(testy==3))
 
 
-#question 2
+# # question 2
 # @interact_manual( feature=IntSlider(0,0,12), label=IntSlider(1,1,3))
 # def density_plot(feature, label):
 #     plt.hist(trainx[trainy==label,feature],normed=True)
