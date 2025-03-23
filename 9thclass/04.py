@@ -5,24 +5,16 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
-
-# Load and split dataset
 X, y = load_iris(return_X_y=True)
 X_train, X_test, y_train, y_test = train_test_split(StandardScaler().fit_transform(X), y, test_size=0.2, random_state=42)
-
-# Distance metrics to compare
 metrics = ['euclidean', 'manhattan', 'chebyshev']
 accuracies = {}
-
-# Evaluate kNN for each metric
 for metric in metrics:
     knn = KNeighborsClassifier(n_neighbors=5, metric=metric)
     knn.fit(X_train, y_train)
     acc = accuracy_score(y_test, knn.predict(X_test))
     accuracies[metric] = acc
     print(f"Accuracy using {metric} distance: {acc:.4f}")
-
-# Plot results
 plt.bar(accuracies.keys(), accuracies.values(), color=['blue', 'red', 'green'])
 plt.xlabel('Distance Metric')
 plt.ylabel('Accuracy')
